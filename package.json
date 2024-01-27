@@ -1,23 +1,37 @@
 {
-  "name": "starter_project_jekyll",
-  "version": "1.0.0",
-  "description": "A starter project - Jekyll + Gulp + Browsersync + Autoprefixer + Sass",
-  "main": "index.js",
+  "name": "photography",
+  "version": "4.0.0",
+  "description": "A jekyll website for photographer cum developer",
+  "main": "npmfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rampatra/photography.git"
+  },
+  "keywords": [
+    "photography",
+    "jekyll",
+    "website",
+    "template",
+    "website template",
+    "portfolio",
+    "portfolio website"
+  ],
+  "author": "Nathan Nguyen",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/rampatra/photography/issues"
+  },
+  "homepage": "https://github.com/rampatra/photography#readme",
   "devDependencies": {
-    "browser-sync": "^2.18.13",
-    "child_process": "^1.0.2",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-cache": "^0.4.6",
-    "gulp-clean-css": "^3.9.0",
-    "gulp-group-css-media-queries": "^1.2.0",
-    "gulp-imagemin": "^3.4.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0"
+    "del": "^4.1.1",
+    "gulp": "^4.0.2",
+    "gulp-image-resize": "^0.13.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-uglify": "^3.0.0",
+    "sass": "^1.25.0"
   }
 }

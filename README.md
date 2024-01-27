@@ -1,177 +1,86 @@
-Lokmont - Simple & Minimal Theme for Jekyll
-=======
-<p>Lokmont is a simple and completely responsive theme for Jekyll, suitable for any kind of bloggers and writers. It was created to be minimal, clean and at the same time functional.</p>
+<img src="https://i.imgur.com/ZG4gSnb.jpeg" alt="demo"/>
 
-Table of Contents
------------------
+# Photography ![OpenCollective](https://opencollective.com/photography/tiers/backer/badge.svg?label=backer&color=brightgreen)
+A jekyll website for photographers
 
-*   [Demo](#demo)
-*   [Features](#features)
-*   [Deployment](#deployment)
-*   [Posts](#posts)
-*   [Other Authors](#authors)
-*   [Disqus Comments](#disqus)
-*   [Google Analytics](#analytics)
-*   [Update favicon](#favicon)
-*   [Credits](#credits)
-*   [License](#license)
-*   [Donate](#donate)
+## Highlights
+1. Easy setup and you get a website of your own for __free__. No web hosting charges too.
+2. To add new pictures, you need to just upload them. __No code__ changes required.
+3. And, my favorite, you get to see EXIF data like __aperture, shutter speed, iso__ etc. when you click on any image, automagically. Moreover, you can customize this as per your needs.
 
-* * *
+## Quick Start
+If you know a tad about tech and love taking pictures then this open-source project may help you setup a website to showcase
+all your creations without effort. And not just that, with this you need not pay a single dime to host your website as
+it's hosted by GitHub for __free__.
 
-### Demo
+**Just follow the below steps and your website would be live in no time:**
 
-Check the theme in action [Demo](https://lokmont-jekyll.netlify.com/)
+1. Fork this repo by hitting the `Fork` button at the top right corner.
+2. Enable github pages from the repo settings.
+3. Upload your pictures to `images/fulls` and `images/thumbs` directory. _You can do that on github.com itself or you can clone and push the images to your repo._
+4. Add your own custom domain in `CNAME` file or just remove the file if you don't own a domain and use the default domain that github provides ([yourusername].github.io/photography).
+5. Update `baseurl` field in `_config.yml` file with whatever domain you used in step 4.
+6. And that's it, your website is set. To view, go to [photography.rampatra.com](http://photography.rampatra.com) (or whatever you have in the CNAME file) and if you don't have one, you can go to [[yourusername].github.io/photography](http://yourusername.github.io/photography)
 
-![Main page preview](https://github.com/artemsheludko/lokmont/blob/master/images/home-page.jpg?raw=true)
+And, of course, you don't want my name at the bottom to show up. You can change it in `_config.yml` file as well as a few other settings like your social links, google analytics, etc. Just do not forget to [build the website](#build-the-website) after you make the changes.
 
-The post page would look like this:
+## Run the website locally to test
+1. `$ cd photography` - go to the project directory
+2. `$ bundle install` - install gems
+3. Change the `baseurl` in `_config.yml`
+4. `$ bundle exec jekyll serve` - start/run the website
 
-![Post page preview](https://github.com/artemsheludko/lokmont/blob/master/images/post-page.jpg?raw=true)
+### Build the website
+1. `$ cd photography` - go to the project directory
+2. `$ npm install` - install all npm dependencies
+3. `$ gulp` - minify css, js, resize images, etc.
 
-* * *
+Note: You only need to build the website if you make changes such as replacing the images, modifying the css styles, etc.
+ 
+## ProTips
 
-### Features
+### Resize Images
+I have made this as a [npm](https://www.npmjs.com) package with [gulp](http://gulpjs.com/) to __automate image resizing
+and thumbnail generation__. So if you're lazy like me then you can just do the following before you push your images to github.
 
-* 100% responsive and clean theme
-* Optimized for mobile devices
-* Minimal design
-* Valid HTML5 code
-* Included site search
-* Contact Page
-* Post sharing
-* Supports Mail Chimp Subscriber
-* Supports Disqus Comments
-* Social Media Profiles
-* Formspree form
-* Font Awesome fonts
-* Google Fonts
+1. Fork and clone the project to your computer
+2. Go inside the project `$ cd photography`
+3. Install all dependencies by `$ npm install`
+4. Copy all your pictures (possibly jpg, the largest size available, straight from your camera) and put it inside `images` directory
+5. Run `$ gulp resize` to resize the images and to generate thumbnails automatically
+6. Push your changes to github.com by `$ git add --all` and `$ git commit -m "a nice commit message"` and then finally `$ git push origin master`
 
-* * *
+### Contact Form
+You can make the contact form work without the need of any server-side code. Just follow this [article on github](https://github.com/dwyl/html-form-send-email-via-google-script-without-server) which uses a simple google script to send emails or to upload to a google spreadsheet when someone submits the form.
 
-### Deployment
+## Credits
+Thanks to [AJ](https://twitter.com/ajlkn) for the website template which I enhanced for [jekyll](http://jekyllrb.com/).
 
-To run the theme locally, navigate to the theme directory and run `bundle install` to install the dependencies, then run `jekyll serve` or `bundle exec jekyll serve` to start the Jekyll server.
+## Backers
 
-I would recommend checking the [Deployment Methods](https://jekyllrb.com/docs/deployment-methods/) page on Jekyll website.
+Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/photography#backers)]
 
-* * *
+<a href="https://opencollective.com/photography#backers" target="_blank"><img src="https://opencollective.com/photography/backers.svg?width=890"></a>
 
-### Posts
+<!-- <a href="https://www.buymeacoffee.com/rampatra" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a> -->
 
-To create a new post, you can create a new markdown file inside the _posts directory by following the [recommended file structure](https://jekyllrb.com/docs/posts/#creating-post-files).
+## Sponsors
 
-```sh
-  ---
-  layout: post
-  title: 10 Best books of all time
-  date: 2017-10-27 18:09:50 +0300
-  img: 17.jpg
-  tags: [Books, Hobby]
-  author: Natali_Braxton # Optional
-  ---
-```        
+Proudly sponsored by [Presentify](http://presentify.compzets.com?ref=GitHub) and [BrowserStack](https://www.browserstack.com?ref=RamPatra). Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [[Become a sponsor](https://opencollective.com/animatescroll#sponsors)]
 
-You can set the tags, author and the post image.
+<table>
+    <tr>
+        <td>
+            <a href="https://presentify.compzets.com/" target="_blank"><img src="https://presentify.compzets.com/assets/img/presentify/app-icon-512.png" width="150" height="150"></a>
+        </td>
+        <td>
+            <a href="https://www.browserstack.com?ref=RamPatra" target="_blank"><img src="https://i.imgur.com/LqI8CO1.png" width="130" height="130"></a>
+        </td>
+    </tr>
+</table>
 
-Add post images to **/images/pages/** directory.
+<a href="https://opencollective.com/photography#sponsors" target="_blank"><img src="https://opencollective.com/photography/sponsors.svg?width=890"></a>
 
-For tags, try to not add space between two words, for example, `Ruby on Rails`, could be something like (`ruby-on-rails`, `Ruby_on_Rails`, or `Ruby-on-Rails`).
+---
 
-* * *
-
-### Authors
-
-You can add other authors for your posts. In the beginning, create the author in the file `_config.yml`
-
-**For example:**
-
-```sh
-  # Other Authors - here you can add Other authors. For example Natali_Braxton
-  authors:
-    Natali_Braxton:
-      author-name: Natali Braxton
-      author-image: 111.jpg
-      about-author: My name is Natali Braxton. I love walking, I play the guitar in my spare time. And also write articles about different technologies.
-      author-email: natali.example@gmail.com
-      author-twitter: https://twitter.com/
-      author-facebook: https://twitter.com/
-      author-instagram: https://www.instagram.com/
-      author-pinterest: https://pinterest.com/
-```
-
-Then add the author in a post. Save and you are done.
-
-```sh
-  ---
-  layout: post
-  title: 10 Best books of all time
-  date: 2017-10-27 18:09:50 +0300
-  img: 17.jpg
-  tags: [Books, Hobby]
-  author: Natali_Braxton
-  ---
-```
-
-* * *
-
-### Disqus
-
-Lokmont Theme comes with Disqus comments enabled.
-
-Open `_config.yml` file, and change the `mr-brown` value on line 52 with your [Disqus account shortname](https://help.disqus.com/customer/portal/articles/466208).
-
-```sh
-  # Comment Section (Disqus)
-  disqus-identifier: mr-brown # Add your shortname for Disqus Comment. For example mr-brown
-```     
-
-That’s all you need to setup Disqus from the theme side. If you get any issue regarding that comments are unable to load. First, make sure you have [registered your website with Disqus (Step 1)](https://help.disqus.com/customer/portal/articles/466182-publisher-quick-start-guide).
-
-And also check [Disqus troubleshooting guide](https://help.disqus.com/customer/portal/articles/472007-i-m-receiving-the-message-%22we-were-unable-to-load-disqus-%22) if you still have issues.
-
-* * *
-
-### Analytics
-
-To integrate Google Analytics, open `_config.yml`, and add your Google Analytics identifier.
-```sh
-  # Google Analytics
-  google-analytics: # Add your identifier. For example UA-99631805-1
-```     
-
-* * *
-
-### Favicon
-
-You can find the current favicon (favicon.ico) inside the theme root directory, just replace it with your new favicon.
-
-* * *
-
-### Credits
-
-We have used the following scripts, fonts or other files as listed.
-
-*   [Google Fonts](https://fonts.google.com/) (Dancing+Script, PT+Serif, Lato, Roboto).
-*   [Font Awesome](https://fontawesome.com/v4.7.0/)
-*   [FitVids.js](http://fitvidsjs.com/)
-*   [jQuery-viewport-checker](https://github.com/dirkgroenen/jQuery-viewport-checker)
-*   [Zoom](https://github.com/fat/zoom.js)
-*   [Transition](http://getbootstrap.com/javascript/#transitions)
-*   [jQuery.com](https://jquery.com/)
-*   [Simple-Jekyll-Search](https://github.com/christian-fei/Simple-Jekyll-Search)
-*   Preview Images [unsplash.com](https://unsplash.com/), [pexels.com](https://www.pexels.com/)
-
-* * *
-
-### License
-
-MIT License
-
-* * *
-
-### Donate
-
-<p>If you want to show your appreciation, buy me one <a href="https://www.buymeacoffee.com/artemsheludko" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a> ! Every five cups of coffee and a new theme for Jekyll is ready 😋</p>
-<p>Either way, your support is a way to thank me ❤️</p>
-<p align="center"><b>Thank you for your support!</b></p>
+_P.S. For any queries or concerns, you can reach out to me on [Twitter](https://twitter.com/ram__patra). I'll try my best to help 🙏._
